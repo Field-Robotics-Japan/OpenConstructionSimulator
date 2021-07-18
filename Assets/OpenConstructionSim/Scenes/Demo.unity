@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 1174260005}
   - component: {fileID: 1174260004}
   - component: {fileID: 1174260003}
+  - component: {fileID: 1174260006}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -282,6 +283,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1174260006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174260002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834a20e56e9d1b45bd5e984a6980134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isRestoreFirstTerrain: 1
+  _sandPrefab: {fileID: 1080515807090306334, guid: 440d04b930f69484188bdd69f142f270, type: 3}
+  _terrainDepth: 2
+  _deformSmoothLevel: 1
 --- !u!1001 &1482803782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -299,15 +316,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 93083377421715035, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.85431
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 93083377421715035, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000047683716
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 93083377421715035, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.732561
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 93083377421715035, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
       propertyPath: m_LocalRotation.w
