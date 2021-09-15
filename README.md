@@ -1,5 +1,8 @@
-# Open Construction Simulator (OCS) Demo/Full ver
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/26988372/133429919-b7c8d779-7036-488e-8b17-1340bd41ea3d.png" />
+</p>
 
+## Description
 Open Construction Simulator (OCS) is a free construction simulator.  
 It is developed based on the game engine "Unity" and provides a simulation environment for excavation and earth transportation using heavy machinery.
 
@@ -17,7 +20,7 @@ Please check them if you have more interests.
 - [OcsTerrain](https://github.com/qoopen0815/OcsTerrain) : Terrain control package
 - [OcsVehicle](https://github.com/qoopen0815/OcsVehicle) : Vehicle control package
 
-# Installation
+## Installation
 ### 1．Installation of unity(2020.3.6f1)
 First, install UnityHub with following links.
 - Windows, Mac : https://unity3d.com/jp/get-unity/download
