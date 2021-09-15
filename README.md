@@ -50,9 +50,9 @@ You have `.exe` file from above link. Just run them.
    If you need any other version, the procedure is same.
    After above commands, the UnityHub will start to install desird version's Unity Editor!
 
-### 4.Open vtc_unity
-Finally, please open `vtc_unity` package from UnityHub. (It takes more than 5 minuites at the first time, in the case)
+### 4.Open project
+Finally, please open `OpenConstructionSimulator` package from UnityHub. (It takes more than 5 minuites at the first time, in the case)
 
 ### 5. Select the Scene file
-There are two Scene files in `Asset/vtc_unity/Scene/` directory.  
+There are Demo Scene file in `Asset/OpenConstructionSim/Scenes/DemoEnv.unity`.  
 Please open the Scene file you want.
