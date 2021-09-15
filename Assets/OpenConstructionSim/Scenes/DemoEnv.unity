@@ -253,7 +253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &533870667
 MonoBehaviour:
@@ -279,12 +279,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 93083377421715034, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 93083377421715034, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
       propertyPath: m_Name
       value: Truck
       objectReference: {fileID: 0}
     - target: {fileID: 93083377421715035, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 93083377421715035, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
       propertyPath: m_LocalScale.x
@@ -336,6 +340,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 93083377421715035, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 102070210926230924, guid: 03867d45493f7e0479bf98219709eb7d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -431,7 +439,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1516529684
 GameObject:
@@ -509,13 +517,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516529684}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.20015211, y: 0.22766829, z: -0.04787879, w: 0.9517426}
+  m_LocalPosition: {x: 13.34, y: 6.9, z: 7.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 23.753, y: 26.906, z: 0}
 --- !u!1001 &1609688589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -884,12 +892,16 @@ PrefabInstance:
       value: 0.5229982
       objectReference: {fileID: 0}
     - target: {fileID: 8841508722436428628, guid: 979d6963f9c07004f8689782bed285ed, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 8841508722436428628, guid: 979d6963f9c07004f8689782bed285ed, type: 3}
       propertyPath: m_Name
       value: Backhoe
       objectReference: {fileID: 0}
     - target: {fileID: 8841508722436428629, guid: 979d6963f9c07004f8689782bed285ed, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8841508722436428629, guid: 979d6963f9c07004f8689782bed285ed, type: 3}
       propertyPath: m_LocalScale.x
@@ -1002,6 +1014,10 @@ PrefabInstance:
     - target: {fileID: 8841508722831925427, guid: 979d6963f9c07004f8689782bed285ed, type: 3}
       propertyPath: m_ParentAnchorRotation.z
       value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936666753280440819, guid: 979d6963f9c07004f8689782bed285ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8985516149188703972, guid: 979d6963f9c07004f8689782bed285ed, type: 3}
       propertyPath: m_ParentAnchorPosition.x
