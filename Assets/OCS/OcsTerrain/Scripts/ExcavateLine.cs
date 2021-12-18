@@ -51,16 +51,16 @@ public class ExcavateLine : MonoBehaviour
         this._collider.height = this._lineWidth;
         this._collider.isTrigger = true;
         this._collider.radius = 0.01f;
-        this._collider.direction = 2;   // Z-axis
+        this._collider.direction = 0;   // Z-axis
 
         this._terrainManager = GameObject.FindGameObjectWithTag(this._terrainTagName).GetComponent<TerrainManager>();
         this._isDeformable = false;
 
         this._tips = new GameObject[2] { new GameObject("tip1"), new GameObject("tip2") };
         this._tips[0].transform.parent = this.transform;
-        this._tips[0].transform.localPosition = new Vector3(0, 0, -this._lineWidth / 2);
+        this._tips[0].transform.localPosition = new Vector3(-this._lineWidth / 2, 0, 0);
         this._tips[1].transform.parent = this.transform;
-        this._tips[1].transform.localPosition = new Vector3(0, 0, this._lineWidth / 2);
+        this._tips[1].transform.localPosition = new Vector3(this._lineWidth / 2, 0, 0);
     }
 
     // Update is called once per frame
