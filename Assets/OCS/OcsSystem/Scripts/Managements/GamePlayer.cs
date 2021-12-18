@@ -18,11 +18,11 @@ public class GamePlayer : MonoBehaviour
 
     private int _vehicleNum = 0;
     private bool _isMenu = true;
-    private Ocs.Input.InputActions _input;
-    public Ocs.Input.InputActions Input { get => _input; }
+    private Ocs.Input.SystemInput _input;
+    public Ocs.Input.SystemInput Input { get => _input; }
     public GameObject Camera { set => _camera = value; }
 
-    private void Awake() => this._input = new Ocs.Input.InputActions();
+    private void Awake() => this._input = new Ocs.Input.SystemInput();
     private void OnEnable() => this._input.Enable();
     private void OnDisable() => this._input.Disable();
     private void OnDestroy() => this._input.Dispose();
@@ -32,7 +32,7 @@ public class GamePlayer : MonoBehaviour
     {
         this._camera.transform.parent = this._viewPoint.transform;
         SetAsChild(this._selectObj, this._vehicleList[this._vehicleNum].vehicle.gameObject.transform);
-        var tmp = this._vehicleList[this._vehicleNum].vehicle.transform.Find("OcsDriver").transform;
+        var tmp = this._vehicleList[this._vehicleNum].vehicle.transform.Find("Driver").transform;
         this._selectObj.transform.localPosition = tmp.localPosition + new Vector3(0, 4, 0);
         this._selectObj.transform.rotation = Quaternion.Euler(90.0f, 0.0f, 90.0f);
 
@@ -48,7 +48,7 @@ public class GamePlayer : MonoBehaviour
             this._vehicleNum = System.Math.Max(this._vehicleNum, 0);
 
             SetAsChild(this._selectObj, this._vehicleList[this._vehicleNum].vehicle.gameObject.transform);
-            var tmp = this._vehicleList[this._vehicleNum].vehicle.transform.Find("OcsDriver").transform;
+            var tmp = this._vehicleList[this._vehicleNum].vehicle.transform.Find("Driver").transform;
             this._selectObj.transform.localPosition = tmp.localPosition + new Vector3(0, 4, 0);
             this._selectObj.transform.rotation = Quaternion.Euler(90.0f, 0.0f, 90.0f);
         };
@@ -60,7 +60,7 @@ public class GamePlayer : MonoBehaviour
             this._selectObj.SetActive(true);
             
             SetAsChild(this._selectObj, this._vehicleList[this._vehicleNum].vehicle.gameObject.transform);
-            var tmp = this._vehicleList[this._vehicleNum].vehicle.transform.Find("OcsDriver").transform;
+            var tmp = this._vehicleList[this._vehicleNum].vehicle.transform.Find("Driver").transform;
             this._selectObj.transform.localPosition = tmp.localPosition + new Vector3(0, 4, 0);
             this._selectObj.transform.rotation = Quaternion.Euler(90.0f, 0.0f, 90.0f);
 
@@ -73,9 +73,9 @@ public class GamePlayer : MonoBehaviour
         this._input.Player.Select.started += context =>
         {
             this._selectObj.SetActive(false);
-            this._vehicleList[this._vehicleNum].vehicle.transform.Find("OcsDriver").gameObject.SetActive(true);
+            this._vehicleList[this._vehicleNum].vehicle.transform.Find("Driver").gameObject.SetActive(true);
 
-            this._camera.transform.parent = this._vehicleList[this._vehicleNum].vehicle.transform.Find("OcsDriver").transform;
+            this._camera.transform.parent = this._vehicleList[this._vehicleNum].vehicle.transform.Find("Driver").transform;
             
             this._isMenu = false;
         };
