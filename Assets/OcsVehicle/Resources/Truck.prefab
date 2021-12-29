@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4963875892323372123}
   - component: {fileID: 6873528229979321338}
   - component: {fileID: 994926918500336387}
-  - component: {fileID: 1946556782}
+  - component: {fileID: 8585843017941314323}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -216,7 +216,7 @@ MonoBehaviour:
     maxExtendRange: 2.5
     inverse: 0
   _controlSpeed: 0.05
---- !u!114 &1946556782
+--- !u!114 &8585843017941314323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 93083377421715034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f4542ad1a321004f94bad2cb219e42e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e833f55fcfea6b419590179cb5cfb2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _vehicle: {fileID: 994926918500336387}
