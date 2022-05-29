@@ -296,7 +296,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 623555346003556661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4ef88fe4d8a94c4185c38fa7187a811, type: 3}
+  m_Script: {fileID: 11500000, guid: eb57bc0c837ed304381ac0641e54bac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _vehicle: {fileID: 623555346003556656}
@@ -1254,7 +1254,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8591796849168918946}
-  m_LocalRotation: {x: 0, y: -0.118895106, z: 0.99290687, w: 0}
+  m_LocalRotation: {x: -0.0000001747935, y: -0.1188952, z: 0.9929068, w: 0.000000070699095}
   m_LocalPosition: {x: 0, y: 5.73, z: 1.4199982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2044,7 +2044,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8591796849859329917}
-  m_LocalRotation: {x: -0, y: -0.08100391, z: -0.9967138, w: 0}
+  m_LocalRotation: {x: -0.00000020939056, y: -0.08100391, z: -0.9967138, w: 0.00000029512552}
   m_LocalPosition: {x: 0, y: -0.49400008, z: 4.0380006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2181,7 +2181,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8591796850216060035}
-  m_LocalRotation: {x: 0, y: -0.07216026, z: 0.9973931, w: 0}
+  m_LocalRotation: {x: 0.00000006080509, y: -0.07216016, z: 0.9973931, w: 0.00000084044405}
   m_LocalPosition: {x: 0, y: 3.225, z: 1.6499977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2755,7 +2755,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8591796850672311003}
-  m_LocalRotation: {x: 0.00000009356668, y: 0.035816748, z: 0.9993584, w: -0.0000000033534056}
+  m_LocalRotation: {x: 0.00000009021331, y: 0.035816368, z: 0.9993584, w: 0.00000009021331}
   m_LocalPosition: {x: 0, y: 0.016987134, z: 0.0017437823}
   m_LocalScale: {x: 0.010000003, y: 0.010000003, z: 0.009999999}
   m_Children: []
