@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/OCS/OcsSystem/InputSettings/InputActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/OcsSystem/InputSettings/InputActions.inputactions'
 
 using System;
 using System.Collections;
