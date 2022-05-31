@@ -1,5 +1,3 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/OpenConstructionSimulator/Assets/OcsSystem/InputSettings/InputActions.inputactions'
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
