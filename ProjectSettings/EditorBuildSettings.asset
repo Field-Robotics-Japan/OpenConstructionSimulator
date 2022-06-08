@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/OcsSystem/UI_scenes/LogoScreen.unity
+    guid: 72abe7ce7a027048880dccc11b2510e3
+  - enabled: 1
+    path: Assets/OcsSystem/UI_scenes/Title.unity
+    guid: cf714f738741dc9e4b19443af7958cb7
+  - enabled: 1
+    path: Assets/OcsSystem/UI_scenes/Menu.unity
+    guid: 4e42e2b1ce7d91097a656adac38e00a1
+  - enabled: 1
+    path: Assets/OcsSystem/UI_scenes/DepatureSetting.unity
+    guid: 4ff8847c3412e9ddc8442fa029173d6f
+  - enabled: 1
+    path: Assets/OpenConstructionSim/Scenes/DemoEnv.unity
+    guid: 258ecbb8319a26e42a2f9f63ef57f7d3
   m_configObjects: {}

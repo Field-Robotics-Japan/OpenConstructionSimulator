@@ -1,44 +1,9 @@
 fileFormatVersion: 2
-guid: 8ea839a13397d32409a0a438bbb602fa
+guid: caaa831636fe0a8a3be3ba4deeeb82f6
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: black
-    second: {fileID: 2100000, guid: a6717e6a1484ef841bbdcf1e49008540, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: gray
-    second: {fileID: 2100000, guid: 22fecf7bfb9b0a84aaf39358e28d225d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: light
-    second: {fileID: 2100000, guid: 1071cff3888b98549927e83c2f28e135, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: main_color
-    second: {fileID: 2100000, guid: 73d6b6a4ac8dbb249bf05f39be1b5c08, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mirror
-    second: {fileID: 2100000, guid: c837fe43798ebd245b48c96f7b14377c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: silver
-    second: {fileID: 2100000, guid: b1babdc9214bee348ade30149184aea4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tyre
-    second: {fileID: 2100000, guid: 07cc64493837a9945b7030ebdcc614c3, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -76,8 +41,8 @@ ModelImporter:
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0

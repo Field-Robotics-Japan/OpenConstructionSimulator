@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace Ocs.GameSystem{
 
 public class ModeManeger : MonoBehaviour
 {
 
     [SerializeField] private Toggle automation_toggle;
-    //[SerializeField] private Toggle aroundView_toggle;
+    [SerializeField] private Toggle aroundView_toggle;
 
-    public bool Automation{get;set;}
-    public bool AroundView{get;set;}
+    public bool Automation{get; private set; }
+    public bool AroundView{get; private set; }
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,9 @@ public class ModeManeger : MonoBehaviour
     void Update()
     {
         Automation = automation_toggle.isOn;
-        //AroundView = aroundView_toggle.isOn;
+        AroundView = aroundView_toggle.isOn;
     }
 }
+
+}//end of namespace Ocs.GameSystem
+

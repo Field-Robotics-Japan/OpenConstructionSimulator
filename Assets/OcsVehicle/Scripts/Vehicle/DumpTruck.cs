@@ -15,6 +15,7 @@ namespace Ocs.Vehicle
 
         protected override void Update()
         {
+            vehicleStateUpdate();
             base.Update();
             this._work.RotateJoint(WorkJointInput * this._controlSpeed);
         }

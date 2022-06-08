@@ -236,6 +236,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4e6652bf-7dca-4369-aac4-ad9a13600867",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ababb067-adf8-4fbe-af94-72382502c612",
                     "path": "<Keyboard>/m",
                     "interactions": "",

@@ -19,8 +19,6 @@ namespace Ocs.Vehicle.Controller
         [SerializeField] private string bucket_topic = "wheelLoader/bucket";
         private float wheel_input, steer_input, boom_input, bucket_input;
 
-        [SerializeField] private ModeManeger mode;
-
 
         private void Awake()
         {
@@ -30,12 +28,34 @@ namespace Ocs.Vehicle.Controller
         private void Start()
         {
             // Callback
-            this._input.Car.ShiftUp.started += context => this._vehicle.ReverseGear = false;
-            this._input.Car.ShiftDown.started += context => this._vehicle.ReverseGear = true;
-            this._input.Equipment.Light.started += context => this._vehicle.SwitchLight();
-            this._input.Equipment.Hone.started += context => this._vehicle.PlayHone();
-            this._input.Equipment.LeftWinker.started += context => this._vehicle.SwitchLeftWinker();
-            this._input.Equipment.RightWinker.started += context => this._vehicle.SwitchRightWinker();
+            this._input.Car.ShiftUp.started += context =>{
+                if(_vehicle.ownership){
+                    this._vehicle.ReverseGear = !this._vehicle.ReverseGear;
+                }
+            };
+            //this._input.Car.ShiftDown.started += context => this._vehicle.ReverseGear = true;
+            this._input.Equipment.Light.started += context =>{
+                if(_vehicle.ownership){
+                    this._vehicle.SwitchLight();
+                }
+                
+            };
+            this._input.Equipment.Hone.started += context =>{
+                if(_vehicle.ownership){
+                    this._vehicle.PlayHone();
+                }
+                
+            };
+            this._input.Equipment.LeftWinker.started += context =>{
+                if(_vehicle.ownership){
+                    this._vehicle.SwitchLeftWinker();
+                }
+            };
+            this._input.Equipment.RightWinker.started += context =>{
+                if(_vehicle.ownership){
+                    this._vehicle.SwitchRightWinker();
+                }
+            };
 
             //ros
             ROSConnection.GetOrCreateInstance().Subscribe<Float64>(this.wheelDrive_topic, wheel_callback);
@@ -58,23 +78,30 @@ namespace Ocs.Vehicle.Controller
 
         void Update()
         {
-            if(!mode.Automation){
-                this._vehicle.AccelInput = this._input.Car.Accel.ReadValue<float>();
-                this._vehicle.BrakeInput = this._input.Car.Brake.ReadValue<float>();
-                this._vehicle.SteerInput = this._input.Car.Steering.ReadValue<Vector2>()[0];
-                this._vehicle.BoomInput = -this._input.Backhoe.Lever1.ReadValue<Vector2>()[1];
-                this._vehicle.BucketInput = this._input.Backhoe.Lever1.ReadValue<Vector2>()[0];
-            }else{
-                this._vehicle.AccelInput = wheel_input;
-                this._vehicle.BrakeInput = 0;
-                if(wheel_input < 0){
+            if(_vehicle.automation){ //ros
+                //acceel, brake 
+                if(wheel_input >= 0){
+                    this._vehicle.AccelInput = wheel_input;
+                    this._vehicle.BrakeInput = 0;
+                }else if(wheel_input < 0){
                     this._vehicle.AccelInput = 0;
                     this._vehicle.BrakeInput = System.Math.Abs(wheel_input);
                 }
-                //this._vehicle.BrakeInput = ;
+                //steer
                 this._vehicle.SteerInput = steer_input;
+                //boom
                 this._vehicle.BoomInput = boom_input;
-                this._vehicle.BucketInput = bucket_input;
+                //bucket
+                this._vehicle.BucketInput = bucket_input; 
+            }else{ //controller
+                if(_vehicle.ownership){
+                    this._vehicle.AccelInput = this._input.Car.Accel.ReadValue<float>();
+                    this._vehicle.BrakeInput = this._input.Car.Brake.ReadValue<float>();
+                    this._vehicle.SteerInput = this._input.Car.Steering.ReadValue<Vector2>()[0];
+                    this._vehicle.BoomInput = -this._input.Backhoe.Lever1.ReadValue<Vector2>()[1];
+                    this._vehicle.BucketInput = this._input.Backhoe.Lever1.ReadValue<Vector2>()[0];
+                }
+                
             }
         }
 

@@ -5,7 +5,7 @@ using Ocs.Vehicle.DriveTrain;
 
 namespace Ocs.Vehicle
 {
-    public class Crawler : MonoBehaviour
+    public class Crawler : Vehicle
     {
         [Header("- DriveTrain Setting -")]
         [SerializeField] private CrawlerUnit _leftCrawler;
@@ -18,6 +18,8 @@ namespace Ocs.Vehicle
 
         protected virtual void Update()
         {
+            vehicleStateUpdate();
+
             if(!LeftReverse) this._leftCrawler.Drive(LeftCrawlerInput * 100);
             else this._leftCrawler.Drive(-LeftCrawlerInput * 100);
             if (!RightReverse) this._rightCrawler.Drive(RightCrawlerInput * 100);

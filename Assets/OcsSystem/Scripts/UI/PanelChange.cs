@@ -2,27 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
- 
-public class PanelChange : MonoBehaviour
+
+namespace Ocs.GameSystem
 {
-    public GameObject PlayingPanel;
-    public GameObject SettingPanel;
- 
-    void Start()
+    public class PanelChange : MonoBehaviour
     {
-        PlayingPanel.SetActive(true);
-        SettingPanel.SetActive(false);
-    }
- 
-    public void PlayingView()
-    {
-        PlayingPanel.SetActive(true);
-        SettingPanel.SetActive(false);
-    }
- 
-    public void SettingView()
-    {
-        PlayingPanel.SetActive(false);
-        SettingPanel.SetActive(true);
+        public GameObject BasePanel;
+        public GameObject NextPanel;
+
+        void Start()
+        {
+
+        }
+
+        public void SwitchingView()
+        {
+            BasePanel.SetActive(false);
+            NextPanel.SetActive(true);
+        }
+
     }
 }

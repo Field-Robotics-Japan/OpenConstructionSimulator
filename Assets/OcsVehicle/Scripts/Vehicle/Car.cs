@@ -5,7 +5,7 @@ using Ocs.Vehicle.Equipment;
 
 namespace Ocs.Vehicle
 {
-    public class Car : MonoBehaviour
+    public class Car : Vehicle
     {
         [Header("- DriveTrain Setting -")]
         [SerializeField] protected List<DriveTrain.Wheel> _driveTrains;
@@ -65,6 +65,8 @@ namespace Ocs.Vehicle
 
         protected virtual void Update()
         {
+            vehicleStateUpdate();
+
             foreach(DriveTrain.Wheel driveTrain in this._driveTrains)
             {
                 if(!ReverseGear) driveTrain.Drive(MaxAccelTorque * AccelInput, MaxBrakeTorque * BrakeInput);

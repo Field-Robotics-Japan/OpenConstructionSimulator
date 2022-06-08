@@ -29,6 +29,8 @@ namespace Ocs.Vehicle
 
         protected override void Update()
         {
+            vehicleStateUpdate();
+
             float angle = this._steerJoint.localRotation.eulerAngles.y;
             if (angle > 180) angle -= 360;
             angle = Mathf.SmoothDamp(angle,

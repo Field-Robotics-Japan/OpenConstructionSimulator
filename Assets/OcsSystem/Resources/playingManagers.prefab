@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8428776944740674726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8428776944740674728}
+  - component: {fileID: 8428776944740674729}
+  - component: {fileID: 8428776944740674731}
+  m_Layer: 0
+  m_Name: playingManagers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8428776944740674728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428776944740674726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 99.73191, y: -62.742767, z: 119.4511}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8428776944740674729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428776944740674726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646ab09f02bc9e9c68cd164381f66daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaying: 1
+  _wheelLoader: {fileID: 623555346003556661, guid: 0f2126c39b33f04c69a48a858d3da655, type: 3}
+  _backHoe: {fileID: 289612748941303944, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
+  _truck: {fileID: 93083377421715034, guid: e3421758c6b391440b451f4efe981fae, type: 3}
+  sunLight: {fileID: 0}
+  _noonSky: {fileID: 2100000, guid: cdbb40e11399e4a17882ada20a1b896a, type: 2}
+  noonLightIntensity: 1
+  _eveningSky: {fileID: 2100000, guid: fe4e130f9947345a2b213cb5038851a2, type: 2}
+  eveningLightIntensity: 0.35
+  _nightSky: {fileID: 2100000, guid: 51b74d7bad397457d883c5940f7664d8, type: 2}
+  nightLightIntensity: 0.05
+--- !u!114 &8428776944740674731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428776944740674726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3adabc76a8d70f6bad6b3fb4c81f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePath: /StageSetting.json
