@@ -19,6 +19,10 @@ namespace Ocs.Vehicle.Controller
         [SerializeField] private string work_topic = "truck/work";
         private float wheel_input, steer_input, work_input;
 
+#if UNITY_EDITOR
+        [Header("- Debug -")]
+        [SerializeField] private bool _debug_forceManualMode = false;
+#endif
 
         private void Awake()
         {
@@ -76,6 +80,17 @@ namespace Ocs.Vehicle.Controller
 
         void Update()
         {
+#if UNITY_EDITOR
+            if (_debug_forceManualMode)
+            {
+                this._vehicle.AccelInput = this._input.Car.Accel.ReadValue<float>();
+                this._vehicle.BrakeInput = this._input.Car.Brake.ReadValue<float>();
+                this._vehicle.SteerInput = this._input.Car.Steering.ReadValue<Vector2>()[0];
+                this._vehicle.WorkJointInput = this._input.DumpTruck.Work.ReadValue<float>();
+                return;
+            }
+#endif
+
             if(_vehicle.automation){ //ros
                 //accel, brake
                 if(wheel_input >= 0){

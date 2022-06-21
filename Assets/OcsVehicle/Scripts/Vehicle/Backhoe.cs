@@ -23,11 +23,14 @@ namespace Ocs.Vehicle
         public float WinkerIntensity { get => _winkerIntensity; }
 
         [Header("- Arm Setting -")]
-        [SerializeField] private Transform _base;
-        [SerializeField] private CylinderDrivenJoint _boom;
-        [SerializeField] private CylinderDrivenJoint _arm;
-        [SerializeField] private CylinderDrivenJoint _end;
-        [SerializeField] private float _controlSpeed;
+        [SerializeField] private CylinderDrivenJoint_Physics _base;
+        [SerializeField] private CylinderDrivenJoint_Physics _boom;
+        [SerializeField] private CylinderDrivenJoint_Physics _arm;
+        [SerializeField] private CylinderDrivenJoint_Physics _end;
+        [SerializeField] private float _controlSpeed_base;
+        [SerializeField] private float _controlSpeed_boom;
+        [SerializeField] private float _controlSpeed_arm;
+        [SerializeField] private float _controlSpeed_end;
 
         public float BaseInput { get; set; }
         public float BoomInput { get; set; }
@@ -72,10 +75,10 @@ namespace Ocs.Vehicle
         protected override void Update()
         {
             base.Update();
-            this._base.Rotate(Vector3.up * BaseInput * this._controlSpeed);
-            this._boom.RotateJoint(BoomInput * this._controlSpeed);
-            this._arm.RotateJoint(ArmInput * this._controlSpeed);
-            this._end.RotateJoint(EndInput * this._controlSpeed);
+            this._base.RotateJoint(BaseInput * this._controlSpeed_base);
+            this._boom.RotateJoint(BoomInput * this._controlSpeed_boom);
+            this._arm.RotateJoint(ArmInput * this._controlSpeed_arm);
+            this._end.RotateJoint(EndInput * this._controlSpeed_end);
         }
     }
 }

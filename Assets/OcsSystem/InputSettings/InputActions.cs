@@ -1,3 +1,5 @@
+// GENERATED AUTOMATICALLY FROM 'Assets/OcsSystem/InputSettings/InputActions.inputactions'
+
 using System;
 using System.Collections;
 using System.Collections.Generic;

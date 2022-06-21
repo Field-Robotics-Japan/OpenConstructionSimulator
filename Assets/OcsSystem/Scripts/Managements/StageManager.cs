@@ -44,12 +44,11 @@ namespace Ocs.GameSystem{
             }
         }
 
-        // Update is called once per frame
-        void Update()
+        void OnEnable()
         {
             var set = GameSetting.setting;
             
-            if(!isPlaying){
+            if(isPlaying){
                 switch (set.timeZone)
                 {
                     case StageSetting.TimeZone.Noon:

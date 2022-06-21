@@ -19,6 +19,11 @@ namespace Ocs.Vehicle.Controller
         [SerializeField] private string bucket_topic = "wheelLoader/bucket";
         private float wheel_input, steer_input, boom_input, bucket_input;
 
+#if UNITY_EDITOR
+        [Header("- Debug -")]
+        [SerializeField] private bool _debug_forceManualMode = false;
+#endif
+
 
         private void Awake()
         {
@@ -78,7 +83,18 @@ namespace Ocs.Vehicle.Controller
 
         void Update()
         {
-            if(_vehicle.automation){ //ros
+#if UNITY_EDITOR
+            if (_debug_forceManualMode)
+            {
+                this._vehicle.AccelInput = this._input.Car.Accel.ReadValue<float>();
+                this._vehicle.BrakeInput = this._input.Car.Brake.ReadValue<float>();
+                this._vehicle.SteerInput = this._input.Car.Steering.ReadValue<Vector2>()[0];
+                this._vehicle.BoomInput = -this._input.Backhoe.Lever1.ReadValue<Vector2>()[1];
+                this._vehicle.BucketInput = this._input.Backhoe.Lever1.ReadValue<Vector2>()[0];
+                return;
+            }
+#endif
+            if (_vehicle.automation){ //ros
                 //acceel, brake 
                 if(wheel_input >= 0){
                     this._vehicle.AccelInput = wheel_input;

@@ -22,6 +22,11 @@ namespace Ocs.Vehicle.Controller
         [SerializeField] private string end_topic = "backHoe/end";
         private float leftCrawler_input, rightCrawler_input, base_input, boom_input, arm_input, end_input;
 
+#if UNITY_EDITOR
+        [Header("- Debug -")]
+        [SerializeField] private bool _debug_forceManualMode = false;
+#endif
+
 
         private void Awake()
         {
@@ -84,7 +89,19 @@ namespace Ocs.Vehicle.Controller
 
         void Update()
         {
-            if(this._vehicle.automation){ //ros
+#if UNITY_EDITOR
+            if (_debug_forceManualMode)
+            {
+                this._vehicle.LeftCrawlerInput = this._input.Crawler.LeftForward.ReadValue<float>();
+                this._vehicle.RightCrawlerInput = this._input.Crawler.RightForward.ReadValue<float>();
+                this._vehicle.BaseInput = this._input.Backhoe.Lever0.ReadValue<Vector2>()[0];
+                this._vehicle.BoomInput = -this._input.Backhoe.Lever1.ReadValue<Vector2>()[1];
+                this._vehicle.ArmInput = this._input.Backhoe.Lever0.ReadValue<Vector2>()[1];
+                this._vehicle.EndInput = this._input.Backhoe.Lever1.ReadValue<Vector2>()[0];
+                return;
+            }
+#endif
+            if (this._vehicle.automation){ //ros
                 //left crawler
                     if(leftCrawler_input >= 0){
                         this._vehicle.LeftReverse = true;

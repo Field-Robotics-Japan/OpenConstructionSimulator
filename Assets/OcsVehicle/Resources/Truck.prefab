@@ -212,14 +212,8 @@ MonoBehaviour:
   _hone:
     source: {fileID: 3300617089160790345}
     volume: 1
-  _work:
-    targetJoint: {fileID: 749747411096193134}
-    cylinderJoint: {fileID: 187031498042906447}
-    rodJoint: {fileID: 2952547540918564172}
-    minExtendRange: 1.067
-    maxExtendRange: 2.5
-    inverse: 0
-  _controlSpeed: 0.05
+  _work: {fileID: 1957576130}
+  _controlSpeed: 40
 --- !u!114 &8585843017941314323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +230,7 @@ MonoBehaviour:
   wheelDrive_topic: truck/wheel
   steer_topic: truck/steer
   work_topic: truck/work
+  _debug_forceManualMode: 0
 --- !u!1 &277084092901986059
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +849,8 @@ GameObject:
   - component: {fileID: 4649670322059001178}
   - component: {fileID: 8199135455729735445}
   - component: {fileID: 1063394055}
+  - component: {fileID: 1957576123}
+  - component: {fileID: 1957576130}
   m_Layer: 0
   m_Name: Work
   m_TagString: Untagged
@@ -994,10 +991,75 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!59 &1957576123
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823496371418294596}
+  m_ConnectedBody: {fileID: 4963875892323372123}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 1.1706109, z: -3.2332125}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 1
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!114 &1957576130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823496371418294596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddf0240827b882c5a8c95810e8c06b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _power: 10000
+  axis: 0
+  _minVelocity: 0
+  _minAngle: -60
+  _maxAngle: 0
+  _inverse_motor: 0
+  _inverse_sensor: 0
+  _useLimitsForRotation: 1
+  _joint: {fileID: 0}
+  _this_transform: {fileID: 0}
+  _target_transform: {fileID: 0}
+  _angle_offset: 0
+  _angle_now: 0
+  _minAngle_now: 0
+  _maxAngle_now: 0
+  _debug_switch: 0
+  _debug_speed: 0
 --- !u!1 &3915874010172438616
 GameObject:
   m_ObjectHideFlags: 0

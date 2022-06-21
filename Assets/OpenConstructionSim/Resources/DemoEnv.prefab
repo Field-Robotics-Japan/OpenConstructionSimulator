@@ -1,5 +1,61 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &369661242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 369661244}
+  - component: {fileID: 369661243}
+  m_Layer: 0
+  m_Name: SandManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &369661244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369661242}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 35098083399501145}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &369661243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369661242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66a4ac71f6d79341899b2dd3c6da8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _updateInterval: 0.1
+  _minSandRadius: 0.03
+  _maxSandRadius: 0.1
+  _sandDensity: 0.001
+  _sandPrefab: {fileID: 8599621808466554686, guid: e2263b0a08647ed489c0a933536761e4, type: 3}
+  _maxSandCount: 500
+  _minAltitude: -20
+  _sandLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  _deformableTerrain: {fileID: 0}
+  _sandCount: 0
+  _sand: []
 --- !u!1 &35098082282761515
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +66,7 @@ GameObject:
   m_Component:
   - component: {fileID: 35098082282761516}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +80,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35098082282761515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -43.763466, y: 15.273516, z: 27.356697}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 35098082658685993}
@@ -47,7 +103,7 @@ GameObject:
   - component: {fileID: 35098082628131706}
   - component: {fileID: 35098082628131705}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35098082628131686}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.8878479, y: 2.5, z: 24.9842}
+  m_LocalPosition: {x: 0, y: 2.5, z: 25}
   m_LocalScale: {x: 1, y: 5, z: 50.00002}
   m_Children: []
   m_Father: {fileID: 35098082282761516}
@@ -142,7 +198,7 @@ GameObject:
   - component: {fileID: 35098082658685995}
   - component: {fileID: 35098082658685994}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,6 +310,7 @@ Transform:
   - {fileID: 35098083795783138}
   - {fileID: 573655864980990379}
   - {fileID: 35098082282761516}
+  - {fileID: 369661244}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -270,7 +327,7 @@ GameObject:
   - component: {fileID: 35098083705008683}
   - component: {fileID: 35098083705008682}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1040,7 +1097,7 @@ GameObject:
   - component: {fileID: 35098083791719717}
   - component: {fileID: 35098083791719716}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1054,7 +1111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35098083791719713}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.88783836, y: 2.5, z: -24.984234}
+  m_LocalPosition: {x: 0, y: 2.5, z: -25}
   m_LocalScale: {x: 1, y: 5, z: 50.00002}
   m_Children: []
   m_Father: {fileID: 35098082282761516}
@@ -1133,10 +1190,10 @@ GameObject:
   - component: {fileID: 35098083795783138}
   - component: {fileID: 35098083795783137}
   - component: {fileID: 35098083795783136}
-  - component: {fileID: 35098083795783139}
+  - component: {fileID: 1757494457}
   m_Layer: 9
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1149,7 +1206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35098083795783151}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -68.763466, y: 7.7735157, z: 2.356697}
+  m_LocalPosition: {x: -25, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 35098083399501145}
@@ -1199,22 +1256,28 @@ TerrainCollider:
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 440f47df490d9244dbb4b2ef019c7c3b, type: 2}
   m_EnableTreeColliders: 1
---- !u!114 &35098083795783139
+--- !u!114 &1757494457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35098083795783151}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c834a20e56e9d1b45bd5e984a6980134, type: 3}
+  m_Script: {fileID: 11500000, guid: b4e263193026e85488554e9603e93079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isRestoreFirstTerrain: 1
-  _sandPrefab: {fileID: 4596063316285532642, guid: c7aa833493e3bcc4e936505a001c17ca, type: 3}
-  _terrainDepth: 5
-  _deformSmoothLevel: 1
+  _terrain: {fileID: 0}
+  _terrainDepth: 10
+  _offset: {x: 0, y: 0, z: 0}
+  _sandManager: {fileID: 0}
+  _terrainData: {fileID: 0}
+  _terrainSize: {x: 0, y: 0, z: 0}
+  _dimensionRatio: {x: 0, y: 0, z: 0}
+  _terrainHeightmapResolution: 0
+  _isHeightmapChanged: 0
+  _noDeform: 0
 --- !u!1 &918127758053389073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,7 +1304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918127758053389073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.763466, y: 18.273516, z: 32.356697}
+  m_LocalPosition: {x: 25, y: 0.5, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 35098083740555222}

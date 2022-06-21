@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &295234072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295234073}
+  - component: {fileID: 295234074}
+  m_Layer: 0
+  m_Name: ExcavateLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295234073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295234072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8591796849435576372}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295234074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295234072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d180cabd37c05e3488f53fbb45b21e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bucketObj: {fileID: 8591796849435576373}
+  _lineWidth: 7
+  _terrainLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &106057129892644304
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +348,7 @@ MonoBehaviour:
   steer_topic: wheelLoader/steer
   boom_topic: wheelLoader/boom
   bucket_topic: wheelLoader/bucket
+  _debug_forceManualMode: 0
 --- !u!1 &1289906786295517812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1611,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8591796849792625998}
+  - {fileID: 295234073}
   m_Father: {fileID: 8591796851139352029}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2119,7 +2169,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8591796849859329917}
-  m_LocalRotation: {x: -0, y: -0.08100391, z: -0.9967138, w: 0}
+  m_LocalRotation: {x: -0, y: -0.08100447, z: -0.99671376, w: 0}
   m_LocalPosition: {x: 0, y: -0.49400008, z: 4.0380006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

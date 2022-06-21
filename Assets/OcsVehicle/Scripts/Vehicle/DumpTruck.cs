@@ -8,7 +8,7 @@ namespace Ocs.Vehicle
     public class DumpTruck : Car
     {
         [Header("- Work Setting -")]
-        [SerializeField] private CylinderDrivenJoint _work;
+        [SerializeField] private CylinderDrivenJoint_Physics _work;
         [SerializeField] private float _controlSpeed;
         
         public float WorkJointInput { get; set; }
