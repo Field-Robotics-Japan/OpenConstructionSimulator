@@ -68,6 +68,32 @@ namespace Ocs.GameSystem{
                 }
             }
         }
+        
+        void Update()
+        {
+            var set = GameSetting.setting;
+
+            if (!isPlaying)
+            {
+                switch (set.timeZone)
+                {
+                    case StageSetting.TimeZone.Noon:
+                        RenderSettings.skybox = _noonSky;
+                        sunLight.intensity = noonLightIntensity;
+                        break;
+                    case StageSetting.TimeZone.Evening:
+                        RenderSettings.skybox = _eveningSky;
+                        sunLight.intensity = eveningLightIntensity;
+                        break;
+                    case StageSetting.TimeZone.Night:
+                        RenderSettings.skybox = _nightSky;
+                        sunLight.intensity = nightLightIntensity;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
     }
 }
 
