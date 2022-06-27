@@ -54,6 +54,9 @@ namespace Ocs.Vehicle.DriveTrain
         private Transform _target_transform;
 
         [SerializeField]
+        private bool _use_angle_offset;
+
+        [SerializeField]
         private float _angle_offset;
 
         [SerializeField]
@@ -117,7 +120,7 @@ namespace Ocs.Vehicle.DriveTrain
             if (Mathf.Abs(speed) < _minVelocity) speed = 0.0f;
             if (_inverse_motor) speed = -speed;
 
-            _angle_now = CalcAngle() - _angle_offset;
+            _angle_now = CalcAngle() - (_use_angle_offset?_angle_offset:0.0f);
             if (!_inverse_sensor) _angle_now = -_angle_now;
             _angle_now = Mathf.Clamp(_angle_now, _minAngle, _maxAngle);
 
