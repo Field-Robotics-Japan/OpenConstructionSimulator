@@ -45,7 +45,7 @@ You have `.exe` file from above link. Just run them.
 1. Right click on `Unity Hub` button on your desired Unity Editor version, and click "Copy Lilnk Location".
 2. Run `UnityHub.AppImage` by setting copied link location as the argument. Here is the example for `2020.3.6f1` version.
    ```bash
-   $ ./UnityHub.AppImage unityhub://2020.3.6f1/5968d7f82152
+   $ ./UnityHub.AppImage unityhub://2020.3.6f1/338bb68529b2
    ```
    If you need any other version, the procedure is same.
    After above commands, the UnityHub will start to install desird version's Unity Editor!
