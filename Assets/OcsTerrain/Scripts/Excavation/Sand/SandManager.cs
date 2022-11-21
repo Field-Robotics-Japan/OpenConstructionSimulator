@@ -112,8 +112,9 @@ public class SandManager : MonoBehaviour
             if (!_sand[i].isActivated) continue;
             if (_sand[i].rb.transform.position.y < _minAltitude)
             {
-                _sand[i].rb.velocity = Vector3.zero;
+                _deformableTerrain.AddOffset(_sand[i].sandScript._radius/(_deformableTerrain.terrainHeightmapResolution*_deformableTerrain.terrainHeightmapResolution));
                 Dispose(i);
+                terrainUpdate = true;
                 continue;
             }
             if (_sand[i].rb.IsSleeping() && _sand[i].sandScript._onTerrain)
@@ -125,7 +126,7 @@ public class SandManager : MonoBehaviour
                 {
                     if(hit.collider.tag == "Terrain")
                     {
-                        _deformableTerrain.SetHeight(_sand[i].rb.transform.position, _sand[i].rb.transform.position.y);
+                        _deformableTerrain.SetHeight(_sand[i].rb.transform.position, _sand[i].rb.transform.position.y + _sand[i].sandScript._radius);
                         Dispose(i);
                         terrainUpdate = true;
                     }

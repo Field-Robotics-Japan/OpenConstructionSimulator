@@ -25,6 +25,7 @@ public class DeformableTerrain : MonoBehaviour
     [SerializeField] private Vector3 _dimensionRatio;
 
     [SerializeField] private int _terrainHeightmapResolution;
+    public int terrainHeightmapResolution { get => this._terrainHeightmapResolution; }
 
     [SerializeField] private bool _isHeightmapChanged;
 
@@ -157,6 +158,17 @@ public class DeformableTerrain : MonoBehaviour
             for (int j = -1; j < 2; j++)
                 if (IsValidIndex(z + i, x + j))
                     _heightmap[z + i, x + j] = h;
+    }
+
+    public void AddOffset(float value)
+    {
+        for(int i = 0; i < _terrainHeightmapResolution; i++)
+        {
+            for(int j = 0; j < _terrainHeightmapResolution; j++)
+            {
+                _heightmap[i, j] += value / _terrainSize.y;
+            }
+        }
     }
 
     private IEnumerator UpdateTerrainCoroutine()
