@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/OcsSystem/InputSettings/InputActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/OCS/OcsSystem/InputSettings/InputActions.inputactions'
 
 using System;
 using System.Collections;
@@ -242,17 +242,6 @@ namespace Ocs.Input
                     ""name"": """",
                     ""id"": ""0af409fb-8886-464e-81a4-e5b44b139035"",
                     ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Select"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4e6652bf-7dca-4369-aac4-ad9a13600867"",
-                    ""path"": ""<Gamepad>/select"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
