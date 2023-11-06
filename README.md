@@ -8,7 +8,7 @@ It is developed based on the game engine "Unity" and provides a simulation envir
 
 **note**  
 The version maintained in this repository is a **Demo** version.  
-[The Full version](https://github.com/qoopen0815/OpenConstructionSimulator/releases) is distributed only as a binary due to license restrictions.
+[The Full version](https://github.com/Field-Robotics-Japan/OpenConstructionSimulator/releases) is distributed only as a binary due to license restrictions.
 
 ![222_Trim](https://user-images.githubusercontent.com/26988372/133398942-6b8ef0e1-ac1b-4119-a4f6-ea16bbeaaa40.gif)
 
