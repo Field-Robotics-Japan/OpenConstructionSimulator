@@ -1,14 +1,13 @@
 {
   "dependencies": {
     "com.frj.unity-sensors": {
-      "version": "https://github.com/Field-Robotics-Japan/UnitySensors.git",
+      "version": "https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors",
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.burst": "1.4.8",
-        "com.unity.mathematics": "1.2.1"
+        "com.unity.burst": "1.6.6"
       },
-      "hash": "6ce696958fbc0f761c48421c2f21c51b417f0319"
+      "hash": "ebc71051b1c649f177f746d49b1da12cb5d240c4"
     },
     "com.frj.unity-sensors-ros": {
       "version": "https://github.com/Field-Robotics-Japan/UnitySensorsROS.git",
@@ -20,7 +19,7 @@
         "com.unity.robotics.ros-tcp-connector": "https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector",
         "com.frj.unity-sensors": "https://github.com/Field-Robotics-Japan/UnitySensors.git"
       },
-      "hash": "42812d5b1c4109ce7910da745c7fb8b4d0450639"
+      "hash": "e0fe5fd484f0602c69328d5c6115a396033c1ac5"
     },
     "com.unity.animation.rigging": {
       "version": "1.0.3",
@@ -33,8 +32,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.4.11",
-      "depth": 0,
+      "version": "1.6.6",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1"
