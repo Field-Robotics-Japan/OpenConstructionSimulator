@@ -319,10 +319,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 289612748093417059, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.03165591
-      objectReference: {fileID: 0}
     - target: {fileID: 289612748941303944, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
       propertyPath: m_Name
       value: Backhoe
@@ -369,54 +365,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 289612748941303945, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 399029391278283524, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 399029391278283524, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1510105235062010635, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1510105235062010635, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211365869933698408, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211365869933698408, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054469600193809405, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054469600193809405, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370221911034903242, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370221911034903242, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554505029618487763, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554505029618487763, guid: b95cc24db490cac41ae56653ece10b78, type: 3}
-      propertyPath: m_ConnectedAnchor.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
